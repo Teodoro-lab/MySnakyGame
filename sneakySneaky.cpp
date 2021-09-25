@@ -72,20 +72,20 @@ void snake_grow( void ){
 			(*aux).behindNode = (struct snake_node *)(malloc(sizeof(struct snake_node)));
 			switch(snake_direction){
 				case 'w':
-					(*(*aux).behindNode).x = (*aux).x;
-					(*(*aux).behindNode).y = (*aux).y + 1;
+					aux->behindNode->x = aux->x;
+					aux->behindNode->y = aux->y + 1;
 					break;
 				case 's':
-					(*(*aux).behindNode).x = (*aux).x;
-					(*(*aux).behindNode).y = (*aux).y - 1;
+					aux->behindNode->x = aux->x;
+					aux->behindNode->y = aux->y - 1;
 					break;
 				case 'd':
-					(*(*aux).behindNode).x = (*aux).x - 1;
-					(*(*aux).behindNode).y = (*aux).y;
+					aux->behindNode->x = aux->x - 1;
+					aux->behindNode->y = aux->y;
 					break;
 				case 'a':
-					(*(*aux).behindNode).x = (*aux).x + 1;
-					(*(*aux).behindNode).y = (*aux).y;
+					aux->behindNode->x = aux->x + 1;
+					aux->behindNode->y = aux->y;
 					break;
 			}
 			(*(*aux).behindNode).behindNode = NULL;
