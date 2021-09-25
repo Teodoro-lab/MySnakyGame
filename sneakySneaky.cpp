@@ -1,7 +1,7 @@
 #include <stdio.h>	//printf
-#include <conio.h>	//getch
+//#include <conio.h>	//getch
 #include <stdlib.h>	//rand //malloc
-#include <windows.h> //sleep
+//#include <windows.h> //sleep
 #include <time.h>    //time
 
 #define table_len 20
@@ -127,7 +127,7 @@ void snake_body_mov( void ){
 
 void movement( void ){
 	fflush(stdin);
-	switch(getch()) {
+	switch(getchar()) {
       case 'w':
      		snake_direction = 'w';
      		table[head.y][head.x] = ' ';
